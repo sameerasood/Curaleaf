@@ -6,8 +6,7 @@ class CheckDigit {
 
   result() {
     let weight = 0;
-    let i = 0;
-    for (i = 0; i < this.str.length; i++) {
+    for (let i = 0; i < this.str.length; i++) {
       if (i % 3 === 0) {
         weight = 7;
       } else if (i % 3 === 1) {
@@ -15,11 +14,13 @@ class CheckDigit {
       } else if (i % 3 == 2) {
         weight = 1;
       }
+      //   console.log(this.str.charCodeAt(i));
 
       if (this.str[i].match(/[A-Z]/)) {
         this.sum += (this.str.charCodeAt(i) - 55) * weight;
       } else if (this.str[i].match(/[0-9]/)) {
-        this.sum += this.str.charCodeAt(i) * weight;
+        // console.log(parseInt(this.str[i]));
+        this.sum += parseInt(this.str[i]) * weight;
       } else {
         this.sum += 0;
       }
@@ -31,4 +32,4 @@ class CheckDigit {
 
 module.exports = CheckDigit;
 const checkDigit = new CheckDigit("JONES<P<<<11<11<2022");
-console.log(checkDigit.result());
+console.log("result ====" + checkDigit.result());
