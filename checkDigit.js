@@ -20,9 +20,11 @@ class CheckDigit {
     } else {
       sum += 0;
     }
-    let checkDigit = sum % 10;
-    return checkDigit;
+    let finalDigit = sum % 10;
+    return finalDigit;
   }
 }
 
 module.exports = CheckDigit;
+const checkDigit = new CheckDigit("JONES<P<<<11<11<2022");
+console.log(checkDigit.result());
