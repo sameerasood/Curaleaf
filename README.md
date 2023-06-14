@@ -12,7 +12,7 @@ stage 1:
 stage2:
 Sum of the characters times the weighting factors
 7 - J*7
-3 - o*3
+3 - 0*3
 1 - E\*1
 
 stage 3:

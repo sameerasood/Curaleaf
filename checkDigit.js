@@ -1,30 +1,27 @@
 class CheckDigit {
   constructor(str) {
     this.str = str;
-    this.sum = 0
+    this.sum = 0;
   }
 
   result() {
-    for(let i=0; i<this.str.length < i++){
-        if (i%3 === 0){
-            w = 7;
-            elsif(i%3 == 1){
-                w = 3
-            }
-            elseif(i%3 == 2)
-            w = 1
-        }
-        if (this.str[i].in(A..Z) ){
-           this.sum += this.str.charcode[i] - 55 * w
-        }
-
-        elsif(this.str[i].in(0-9)){
-            this.sum += this.str.charcode[i] * w
-        }
-        else 
-        {        this.sum += 0
-}    }
-checkDigit = this.sum % 10
+    let weight = w;
+    for (let i = 0; i < this.str.length; i++) {
+      if (i % 3 === 0) {
+        w = 7;
+      } else if (i % 3 === 1) {
+        w = 3;
+      } else if (i % 3 == 2) w = 1;
+    }
+    if (this.str[i].match(/[A-Z]/)) {
+      this.sum += (this.str.charCodeAt[i] - 55) * w;
+    } else if (this.str[i].match(/[0-9]/)) {
+      this.sum += this.str.charCodeAt[i] * w;
+    } else {
+      sum += 0;
+    }
+    let checkDigit = sum % 10;
+    return checkDigit;
   }
 }
 
