@@ -25,4 +25,4 @@ output - number
 
 Example String: "JONES<P<<<11<11<2022"
 
-![Console log statements](./checkDigit.png)
+![Console log statements](./CheckDigit.png)
