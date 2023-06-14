@@ -5,22 +5,24 @@ class CheckDigit {
   }
 
   result() {
-    let weight = w;
+    let weight = 0;
     for (let i = 0; i < this.str.length; i++) {
       if (i % 3 === 0) {
-        w = 7;
+        weight = 7;
       } else if (i % 3 === 1) {
-        w = 3;
-      } else if (i % 3 == 2) w = 1;
+        weight = 3;
+      } else if (i % 3 == 2) {
+        weight = 1;
+      }
     }
     if (this.str[i].match(/[A-Z]/)) {
-      this.sum += (this.str.charCodeAt[i] - 55) * w;
+      this.sum += (this.str.charCodeAt[i] - 55) * weight;
     } else if (this.str[i].match(/[0-9]/)) {
-      this.sum += this.str.charCodeAt[i] * w;
+      this.sum += this.str.charCodeAt[i] * weight;
     } else {
-      sum += 0;
+      this.sum += 0;
     }
-    let finalDigit = sum % 10;
+    let finalDigit = this.sum % 10;
     return finalDigit;
   }
 }
