@@ -16,10 +16,12 @@ class CheckDigit {
       }
 
       if (this.str[i].match(/[A-Z]/)) {
-        console.log(this.str.charCodeAt(i));
+        console.log(`Code for ${i} is ` + (this.str.charCodeAt(i) - 55));
+
         this.sum += (this.str.charCodeAt(i) - 55) * weight;
       } else if (this.str[i].match(/[0-9]/)) {
-        console.log(parseInt(this.str[i]));
+        console.log(`Code for ${i} is ` + parseInt(this.str[i]));
+
         this.sum += parseInt(this.str[i]) * weight;
       } else {
         this.sum += 0;
